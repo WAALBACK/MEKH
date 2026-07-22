@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569887134932",
+    "project_id": "mekh-30068",
+    "storage_bucket": "mekh-30068.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569887134932:android:1ee870597919d29c425741",
+        "android_client_info": {
+          "package_name": "com.mekh.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzGXGVoPauzmkTiP0bjrP-Y2oK5hlP5Bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

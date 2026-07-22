@@ -1,0 +1,299 @@
+# =============================================================================
+# Mekh robots.txt - Production robots.txt Configuration
+# =============================================================================
+# This file controls how search engine crawlers access your website.
+# Proper configuration improves SEO while protecting sensitive areas.
+#
+# Last Updated: 2026-03-28
+# Project: Mekh (Auto Repair Service Platform)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# SECTION 1: USER-AGENT DIRECTIVES
+# -----------------------------------------------------------------------------
+# Define rules for specific crawlers. The order matters - rules are applied
+# to the first matching User-agent, then to * (all crawlers) as fallback.
+
+# Googlebot - Primary Google crawler for web indexing
+User-agent: Googlebot
+Disallow: 
+Allow: /
+
+# Googlebot-Image - For Google Images search
+User-agent: Googlebot-Image
+Disallow:
+Allow: /
+
+# Googlebot-News - For Google News indexing
+User-agent: Googlebot-News
+Disallow:
+Allow: /
+
+# Googlebot-Video - For video content indexing
+User-agent: Googlebot-Video
+Disallow:
+Allow: /
+
+# Bingbot - Microsoft's Bing search crawler
+User-agent: Bingbot
+Disallow:
+Allow: /
+
+# BingBot - Alternative name for Bing crawler
+User-agent: BingBot
+Disallow:
+Allow: /
+
+# Yahoo! Slurp - Yahoo's crawler (now deprecated but some references exist)
+User-agent: Yahoo! Slurp
+Disallow:
+Allow: /
+
+# DuckDuckBot - DuckDuckGo privacy-focused search
+User-agent: DuckDuckBot
+Disallow:
+Allow: /
+
+# Baidu Spider - Baidu's Chinese search engine crawler
+User-agent: BaiduSpider
+Disallow:
+Allow: /
+
+# Yandex Bot - Yandex (Russian search engine) crawler
+User-agent: Yandex
+Disallow:
+Allow: /
+
+# Sogou Spider - Sogou (Chinese) crawler
+User-agent: Sogou web spider
+Disallow:
+Allow: /
+
+# Exabot - Exalead crawler
+User-agent: Exabot
+Disallow:
+Allow: /
+
+# Facebook Crawler - For social media sharing preview cards
+User-agent: FacebookBot
+Disallow:
+Allow: /
+
+# Twitterbot - For Twitter card rendering
+User-agent: Twitterbot
+Disallow:
+Allow: /
+
+# Applebot - For Apple search (Siri Suggestions)
+User-agent: Applebot
+Disallow:
+Allow: /
+
+# Amazonbot - For Alexa product search
+User-agent: Amazonbot
+Disallow:
+Allow: /
+
+# -----------------------------------------------------------------------------
+# SECTION 2: AI BOTS - EXPLICITLY ALLOWED FOR TRAINING & CITATIONS
+# -----------------------------------------------------------------------------
+# Allow AI bots to crawl and cite content from the platform.
+# This helps AI assistants provide accurate information about automotive services.
+
+# GPTBot - OpenAI's web crawler for ChatGPT training
+User-agent: GPTBot
+Disallow:
+Allow: /
+
+# ChatGPT-User - ChatGPT's browsing feature
+User-agent: ChatGPT-User
+Disallow:
+Allow: /
+
+# Claude-Web - Anthropic's Claude web crawler
+User-agent: Claude-Web
+Disallow:
+Allow: /
+
+# ClaudeBot - Alternative name for Claude's crawler
+User-agent: ClaudeBot
+Disallow:
+Allow: /
+
+# PerplexityBot - Perplexity AI's web crawler
+User-agent: PerplexityBot
+Disallow:
+Allow: /
+
+# Google-Extended - Google's AI training crawler (Gemini/Bard)
+User-agent: Google-Extended
+Disallow:
+Allow: /
+
+# Anthropic-AI - Anthropic's general AI crawler
+User-agent: Anthropic-AI
+Disallow:
+Allow: /
+
+# Cohere-AI - Cohere's AI training crawler
+User-agent: Cohere-AI
+Disallow:
+Allow: /
+
+# -----------------------------------------------------------------------------
+# SECTION 3: DEFAULT RULES FOR ALL CRAWLERS
+# -----------------------------------------------------------------------------
+# These rules apply to any crawler not matched above.
+
+User-agent: *
+
+# ── Sensitive Directories ──
+Disallow: /admin
+Disallow: /admin/
+Disallow: /ag-internal-2026
+Disallow: /auth/callback
+Disallow: /api
+Disallow: /delete-account
+
+# ── Private user areas (require authentication) ──
+Disallow: /menu
+Disallow: /bookings
+Disallow: /profile
+Disallow: /dashboard
+Disallow: /technician-dashboard
+
+# ── Source / config files (should never be served in production) ──
+Disallow: /src
+Disallow: /components
+Disallow: /pages
+Disallow: /types
+Disallow: /scripts
+Disallow: /migrations
+Disallow: /.git
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json
+Disallow: /supabase-setup.sql
+
+# ── File type blocks ──
+Disallow: /*.sql$
+Disallow: /*.backup
+Disallow: /*.temp
+Disallow: /*.bak
+
+# ── Allow public pages explicitly (overrides above for crawlers that respect order) ──
+Allow: /auth$
+Allow: /$
+Allow: /about
+Allow: /blogs
+Allow: /article/
+Allow: /contact
+Allow: /terms
+Allow: /privacy-policy
+Allow: /services/
+Allow: /technician/
+Allow: /nearby/
+Allow: /join
+Allow: /roadside-emergency
+Allow: /guest-menu
+
+# ── Static assets ──
+Allow: /assets/
+Allow: /manifest.json
+Allow: /favicon.ico
+
+
+# Allow sitemap discovery
+Allow: /sitemap.xml
+
+# -----------------------------------------------------------------------------
+# SECTION 7: CRAWL-DELAY DIRECTIVE
+# -----------------------------------------------------------------------------
+# Crawl-delay specifies the delay between successive crawl requests.
+# This helps prevent server overload from aggressive crawlers.
+# Note: Only supported by some crawlers (Yahoo Slurp, Yandex, etc.)
+# Googlebot and Bing respect sitemaps more than crawl-delay.
+#
+# For a typical web application, 1-2 seconds is reasonable.
+# Adjust based on your server capacity and traffic.
+
+Crawl-delay: 1
+
+# -----------------------------------------------------------------------------
+# SECTION 8: SITEMAP LOCATION
+# -----------------------------------------------------------------------------
+# Point to your XML sitemap for better SEO and crawl efficiency.
+# This helps search engines discover all URLs on your site.
+# 
+# Replace mekh.app with your actual production domain.
+# For local development, this would be localhost or your dev URL.
+
+Sitemap: https://mekh.app/sitemap.xml
+
+# Alternative: Point to index sitemap if you have multiple sitemaps
+# Sitemap: https://yourdomain.com/sitemap-index.xml
+
+# -----------------------------------------------------------------------------
+# SECTION 9: ENVIRONMENT-SPECIFIC RULES
+# -----------------------------------------------------------------------------
+# These rules handle different deployment environments.
+# Uncomment and adjust based on your environment.
+
+# Production Environment Rules
+# -----------------------------------------------------------------------------
+# For production, ensure all security blocks are active.
+# The base rules above already handle this.
+
+# Staging/Development Environment Rules
+# -----------------------------------------------------------------------------
+# If you have separate staging environments, you might want to
+# completely block staging to prevent indexing.
+# 
+# Example for staging:
+# User-agent: *
+# Disallow: /
+# 
+# Example for development:
+# User-agent: *
+# Disallow: /
+# Allow: /$
+
+# -----------------------------------------------------------------------------
+# SECTION 10: ADVANCED ROBOTS.TXT DIRECTIVES
+# -----------------------------------------------------------------------------
+
+# Clean URLs - Help search engines understand clean URL structure
+# Modern bots handle query parameters well, but explicit rules help
+
+# Prevent indexing of duplicate content with tracking parameters
+# Examples (uncomment as needed):
+# Disallow: /*utm_source
+# Disallow: /*utm_medium
+# Disallow: /*utm_campaign
+# Disallow: /*fbclid
+# Disallow: /*gclid
+
+# -----------------------------------------------------------------------------
+# SECTION 11: HOST DIRECTIVE (Legacy, but still respected by some)
+# -----------------------------------------------------------------------------
+# Specifies the preferred domain for crawling.
+# Most modern crawlers use canonical URLs instead.
+
+# Host: www.mekh.app
+# Or for non-www:
+# Host: mekh.app
+
+# -----------------------------------------------------------------------------
+# END OF ROBOTS.TXT
+# -----------------------------------------------------------------------------
+# For questions about robots.txt, refer to:
+# - Google: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+# - Bing: https://www.bing.com/webmasters/help/robots-01-97bcf1b5
+# - Yandex: https://yandex.com/support/webmaster/robots.xml
+#
+# Always test your robots.txt after deployment using:
+# - Google Search Console robots.txt Tester
+# - Bing Webmaster Tools
+# - Online robots.txt validators
+# =============================================================================

@@ -1,0 +1,423 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* CSS Root Enforcement - Light Mode Always */
+:root {
+  color-scheme: light only;
+  background-color: white;
+  scroll-padding-top: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Force light backgrounds on all mobile inputs */
+input, textarea, select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+
+  /* Primary Brand Colors - Royal Blue */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #1A56DB;  /* Main brand color - Royal Blue */
+  --color-primary-700: #1e40af;
+  --color-primary-800: #1e3a8a;
+  --color-primary-900: #1e293b;
+  
+  /* Rating Color */
+  --color-rating-yellow: #F59E0B;
+
+  /* Brand Colors - Hardcoded for consistent premium light theme */
+  --color-brand-bg: #f8fafc;
+  --color-brand-surface: #f8fafc;
+  --color-accent: #1877f2;
+  
+  /* Override default slate colors to use light variants */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  --utility-scrollbar-hide-scrollbars: none;
+  --utility-scrollbar-hide-scrollbar-width: none;
+  --utility-scrollbar-hide-ms-overflow-style: none;
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom font styling */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Global Light Theme Overrides - Force light backgrounds everywhere */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+/* Override any dark backgrounds with light theme */
+.bg-slate-900,
+.bg-slate-950,
+.bg-gray-900,
+.bg-gray-950 {
+  background-color: #f8fafc !important;
+}
+
+.bg-slate-800,
+.bg-gray-800 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Override dark text with light theme text - Improved visibility */
+/* Exception: Keep text-white on primary backgrounds and buttons */
+.bg-primary-600 .text-white,
+.bg-primary-700 .text-white,
+.bg-primary-800 .text-white,
+button .text-white,
+.btn .text-white,
+button.text-white,
+.btn.text-white {
+  color: #ffffff !important;
+}
+
+/* Only override text-white in non-button contexts */
+p.text-white,
+span.text-white,
+div.text-white:not(button):not(.btn) {
+  color: #0f172a !important;
+}
+
+.text-slate-50,
+.text-slate-100 {
+  color: #0f172a !important;
+}
+
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600 {
+  color: #0f172a !important;
+}
+
+/* Override dark borders with light borders */
+.border-slate-800,
+.border-slate-700,
+.border-gray-800 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Button and Icon Styling - Accent Blue */
+
+
+/* Remove the global SVG color override - let components control their own icon colors */
+/* svg, .icon {
+  color: #1877f2 !important;
+} */
+
+/* Scrollbar hide utilities */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* TikTok Brand Glitch Effect */
+.tiktok-glitch {
+  transition: all 0.3s ease;
+}
+
+.tiktok-glitch:hover {
+  filter: drop-shadow(2px 0px 0px #fd2e53) drop-shadow(-2px 0px 0px #00f2ea);
+  transform: scale(1.1) translateY(-2px);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 25s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Respect user preference for reduced motion — also saves GPU on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none;
+  }
+}
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Fade Masks */
+.fade-mask-left,
+.fade-mask-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.fade-mask-left {
+  left: 0;
+  background: linear-gradient(to right, #f8fafc 0%, transparent 100%);
+}
+
+.fade-mask-right {
+  right: 0;
+  background: linear-gradient(to left, #f8fafc 0%, transparent 100%);
+}
+
+/* Quill Editor Light Theme */
+.ql-toolbar.ql-snow {
+  border-color: #cbd5e1 !important;
+  background: #f8fafc;
+}
+
+.ql-container.ql-snow {
+  border-color: #cbd5e1 !important;
+  background: #f8fafc;
+}
+
+.ql-snow .ql-stroke {
+  stroke: #64748b;
+}
+
+.ql-snow .ql-fill {
+  fill: #64748b;
+}
+
+.ql-snow .ql-picker {
+  color: #64748b;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke {
+  stroke: #0877f2;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-fill {
+  fill: #0877f2;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-picker,
+.ql-snow .ql-toolbar button:hover .ql-picker {
+  color: #0877f2;
+}
+
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke {
+  stroke: #0877f2;
+}
+
+.ql-editor {
+  color: #0f172a;
+  min-height: 200px;
+}
+
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor p,
+.ql-editor span,
+.ql-editor li {
+  color: #0f172a !important;
+}
+
+.ql-editor.ql-blank::before {
+  color: #94a3b8;
+  font-style: normal;
+}
+
+
+
+/* Horizontal Scroll Container Styles */
+.horizontal-scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  contain: style;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+.horizontal-scroll-container > div {
+  scroll-snap-align: start;
+}
+
+/* Hide thin scrollbar for horizontal scroll */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Location Banner Slide Animation */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out forwards;
+}
+
+/* ─── MOBILE PERFORMANCE OPTIMIZATIONS ─────────────────────────────── */
+
+/* content-visibility: auto makes sections below the fold skip rendering work
+   until they approach the viewport. This dramatically reduces initial paint time
+   on low-end devices with many sections (HomePage has 9+ sections). */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 200px;
+}
+
+/* GPU-composited fixed nav — prevents repainting on scroll */
+nav[class*="fixed"] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Horizontal scroll containers get layout containment for fewer reflows */
+[class*="overflow-x-auto"] {
+  contain: style;
+  touch-action: pan-x pan-y pinch-zoom;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+}
+
+/* Data saver mode: disable all non-essential animations and transitions */
+@media (prefers-reduced-data: reduce) {
+  .animate-pulse,
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-slide-up,
+  .animate-slide-down {
+    animation: none !important;
+  }
+  img[loading="lazy"] {
+    content-visibility: auto;
+  }
+}

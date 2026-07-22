@@ -1,0 +1,16 @@
+http://mekh.app/*     https://mekh.app/:splat  301!
+http://www.mekh.app/* https://mekh.app/:splat  301!
+https://www.mekh.app/* https://mekh.app/:splat  301!
+
+# Enforce trailing slash (or remove it — pick one)
+/services/:service/:location  /services/:service/:location/  301
+
+/technicians/:service/:location  /services/:service/:location  301
+
+# Redirect old location slugs to new ones
+/services/:service/waiyaki-way  /services/:service/westlands  301
+/services/:service/dagoretti-corner  /services/:service/nairobi  301
+/services/car-buffing/:location  /services/car-detailing/:location  301
+
+# SPA fallback (must be last)
+/*    /index.html    200

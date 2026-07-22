@@ -1,0 +1,13 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls",
+    "delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mekh.app",
+    "sha256_cert_fingerprints": [
+      "7A:D8:AA:1D:96:23:D8:3C:50:D1:79:FC:0C:A3:37:BF:9D:55:DD:C6:AB:DA:16:68:59:09:26:A1:71:7A:57:5A",
+      "F2:17:C9:3C:A3:D7:E5:15:A4:DA:41:1B:E7:56:E0:3A:B7:50:4F:C3:01:BF:C4:31:9C:8E:9C:75:A1:13:82:40",
+      "90:92:EC:72:05:8D:8A:84:1C:46:AB:A8:C1:A8:2B:03:47:75:F8:64:32:2C:CE:6F:5B:28:53:0B:1A:30:6F:20"
+    ]
+  }
+}]

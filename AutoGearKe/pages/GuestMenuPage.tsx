@@ -1,0 +1,128 @@
+import React, { memo } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+const GuestMenuPage: React.FC = memo(() => {
+  const navigate = useNavigate();
+
+  // Handle "Join as Technician" click - redirect to auth page with technician context
+  const handleJoinAsTechnician = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Set technician context in localStorage before redirecting to auth page
+    localStorage.setItem('authRedirectToTechnician', 'true');
+    navigate('/auth');
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-50 pb-24">
+      {/* Mekh Section */}
+      <div className="p-4">
+        <h3 className="text-xs font-black uppercase tracking-widest text-blue-500 mb-3">Mekh</h3>
+        <div className="bg-slate-900 rounded-lg border border-blue-500 overflow-hidden">
+          <Link 
+            to="/estimate" 
+            className="flex items-center gap-3 p-4 border-b border-blue-500 hover:bg-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="text-blue-500">Estimate Cost</span>
+          </Link>
+          <Link 
+            to="/about" 
+            className="flex items-center gap-3 p-4 border-b border-blue-500 hover:bg-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="text-blue-500">About Us</span>
+          </Link>
+          <Link 
+            to="/contact" 
+            className="flex items-center gap-3 p-4 border-b border-blue-500 hover:bg-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span className="text-blue-500">Contact Us</span>
+          </Link>
+          <button 
+            onClick={handleJoinAsTechnician}
+            className="flex items-center gap-3 p-4 bg-blue-500 border-b border-blue-500 hover:bg-blue-500 transition-colors w-full text-left"
+          >
+            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+            </svg>
+            <span className="text-[#ffff]">Join as Technician</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Legal Section */}
+      <div className="p-4">
+        <h3 className="text-xs font-black uppercase tracking-widest text-blue-500 mb-3">Legal</h3>
+        <div className="bg-white rounded-lg border border-blue-500 overflow-hidden">
+          <Link 
+            to="/terms" 
+            className="flex items-center gap-3 p-4 border-b border-blue-500 hover:bg-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span className="text-blue-500">Terms & Conditions</span>
+          </Link>
+          <Link 
+            to="/privacy" 
+            className="flex items-center gap-3 p-4 hover:bg-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <span className="text-blue-500">Privacy Policy</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Sign In / Sign Up Section */}
+      <div className="p-4">
+        <h3 className="text-xs font-black uppercase tracking-widest text-blue-500 mb-3">Account</h3>
+        <div className="bg-slate-900 rounded-lg border border-blue-500 overflow-hidden">
+          <Link 
+            to="/auth" 
+            className="flex items-center gap-3 p-4 border-b border-blue-500 hover:bg-blue-300 transition-colors"
+          >
+            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+            </svg>
+            <span className="text-blue-500">Sign In / Sign Up</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Bottom Navigation - Menu tab highlighted */}
+      <nav className="fixed bottom-0 left-0 right-0 flex md:hidden bg-slate-900 border-t border-slate-800 p-3 justify-around z-50" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}>
+        <Link to="/" className="flex flex-col items-center text-slate-300 hover:text-white transition-colors">
+          <svg className="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          <span className="text-xs font-medium">Home</span>
+        </Link>
+        <Link to="/roadside-emergency" className="flex flex-col items-center text-slate-300 hover:text-white transition-colors">
+          <svg className="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+          </svg>
+          <span className="text-xs font-medium">SOS</span>
+        </Link>
+        <Link to="/guest-menu" className="flex flex-col items-center text-blue-500 transition-colors">
+          <svg className="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+          <span className="text-xs font-medium">Menu</span>
+        </Link>
+      </nav>
+    </div>
+  );
+});
+
+GuestMenuPage.displayName = 'GuestMenuPage';
+
+export default GuestMenuPage;

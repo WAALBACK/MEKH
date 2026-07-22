@@ -1,0 +1,51 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com https://unpkg.com data:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https: https://res.cloudinary.com https://p16-tiktokcdn-com.akamaized.net https://p16-tiktok-com.akamaized.net https://*.tiktokcdn.com https://*.tiktok.com https://c.tile.openstreetmap.org https://*.tile.openstreetmap.org; connect-src 'self' blob: data: https://*.supabase.co wss://*.supabase.co https://api.cloudinary.com https://res.cloudinary.com https://*.cloudinary.com https://nominatim.openstreetmap.org https://*.openstreetmap.org https://www.tiktok.com https://*.tiktok.com https://api.allorigins.win https://www.google-analytics.com https://www.google.com https://www.googletagmanager.com https://static.cloudflareinsights.com https://unpkg.com https://fonts.googleapis.com https://fonts.gstatic.com https://mekh.app/cdn-cgi/rum; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:; media-src 'self' blob:; manifest-src 'self'; frame-src 'self' https://www.google.com https://accounts.google.com https://www.youtube.com https://www.tiktok.com https://www.instagram.com https://player.vimeo.com;
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/manifest.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/
+  Cache-Control: no-cache
+
+/*.html
+  Cache-Control: no-cache
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+
+/assets/*.js
+  Content-Type: application/javascript; charset=utf-8
+
+/*.css
+  Content-Type: text/css; charset=utf-8
+
+/assets/*.css
+  Content-Type: text/css; charset=utf-8
+
+/*.mjs
+  Content-Type: application/javascript; charset=utf-8
+
+/assets/*.mjs
+  Content-Type: application/javascript; charset=utf-8
+
+/assets/*.svg
+  Content-Type: image/svg+xml; charset=utf-8
+
+/assets/*.woff
+  Content-Type: font/woff
+
+/assets/*.woff2
+  Content-Type: font/woff2
+
+/favicon.ico
+  Content-Type: image/x-icon
+  Cache-Control: public, max-age=86400
