@@ -1,0 +1,237 @@
+How to Install Mekh PWA on Your Mobile Device
+Introduction
+Mekh is a Progressive Web App (PWA) that can be installed on your mobile device just like a regular app from the app store. Installing Mekh gives you a native app-like experience with faster loading, offline capabilities, and easy access from your home screen. This guide covers the installation process for both Android and iOS devices.
+
+What is a PWA?
+Progressive Web Apps combine the best of web and mobile apps:
+
+Native app experience without app store downloads
+Offline functionality for basic browsing
+Push notifications (when implemented)
+Home screen installation for quick access
+Automatic updates without manual app store updates
+System Requirements
+
+Android Requirements
+Chrome Browser (recommended) or Samsung Internet
+Android 8.0+ (Oreo or later)
+At least 50MB free storage space
+Internet connection for initial installation
+iOS Requirements
+Safari Browser (required for installation)
+iOS 16.4+ (iPhone and iPad)
+At least 50MB free storage space
+Internet connection for initial installation
+
+Installation on Android Devices
+Method 1: Using Chrome Browser (Recommended)
+Open Chrome Browser
+Launch Google Chrome on your Android device
+Make sure you're using the latest version
+Visit Mekh Website
+Go to mekh.app
+Wait for the page to fully load
+Look for Install Prompt
+You'll see a banner at the bottom of the screen saying "Install Mekh"
+If you don't see it, tap the menu (three dots) in the top-right corner
+Install the App
+Tap the "Install" button in the banner, or
+Tap "Add to Home screen" from the menu
+Confirm the installation when prompted
+Access from Home Screen
+The Mekh app icon will appear on your home screen
+Tap it to launch the app in standalone mode
+Method 2: Using Samsung Internet Browser
+Open Samsung Internet
+Launch Samsung Internet browser
+Navigate to mekh.app
+Tap the Menu
+Tap the menu button (three lines) in the bottom-right corner
+Select "Add to Home screen"
+Install
+Confirm the installation
+The app will be added to your home screen
+
+Method 3: Manual Installation (Alternative)
+If the automatic prompt doesn't appear:
+
+Open Browser Menu
+Tap the three dots menu in Chrome/Samsung Internet
+Look for "Add to Home screen" or "Install app"
+Add to Home Screen
+Select "Add to Home screen"
+Customize the app name if desired (defaults to "Mekh")
+Tap "Add"
+Launch from Home Screen
+Find the Mekh icon on your home screen
+Tap to open in app mode
+Installation on iOS Devices (iPhone/iPad)
+Using Safari Browser (Required)
+Open Safari Browser
+Safari is the only browser that supports PWA installation on iOS
+Do not use Chrome, Firefox, or other browsers for installation
+Visit Mekh Website
+Open Safari and go to mekh.app
+Wait for the page to load completely
+Tap the Share Button
+Look for the share icon (square with upward arrow) at the bottom of the screen
+Tap it to open the share menu
+Find "Add to Home Screen"
+Scroll through the share options
+Look for "Add to Home Screen" (may be in the second row)
+Tap it
+Confirm Installation
+Review the app name (Mekh) and icon
+Tap "Add" in the top-right corner
+Access from Home Screen
+The Mekh app icon will appear on your home screen
+Tap it to launch the app
+Troubleshooting iOS Installation
+Can't find "Add to Home Screen"?
+
+Make sure you're using Safari (not Chrome or other browsers)
+Try refreshing the page and waiting for full load
+Check that you're running iOS 16.4 or later
+App doesn't appear on home screen?
+
+Check all home screen pages
+Try searching for "Mekh" in Spotlight search
+Restart your device and check again
+
+Post-Installation Setup
+First Launch
+Open the App
+Tap the Mekh icon on your home screen
+The app will launch in standalone mode
+Sign In or Register
+If you have an account, sign in
+New users can create an account or continue as guest
+Grant Permissions (Optional)
+Allow location access for nearby technician search
+Enable notifications for booking updates (future feature)
+App Features in PWA Mode
+Standalone Experience: Looks and feels like a native app
+Offline Mode: Basic browsing when internet is unavailable
+Fast Loading: Cached content loads instantly
+Home Screen Shortcuts: Quick access to key features
+Managing Your Installed PWA
+Android Management
+Update the App:
+
+Updates happen automatically in the background
+Manual updates via browser if needed
+Uninstall the App:
+
+Long-press the Mekh icon on your home screen
+Tap "Uninstall" or "Remove"
+Confirm the removal
+Clear App Data:
+
+Go to Settings > Apps > Mekh > Storage > Clear data
+iOS Management
+Update the App:
+
+Updates happen automatically
+Force refresh by pulling down on the home screen
+Remove the App:
+
+Long-press the Mekh icon until it jiggles
+Tap the minus (-) button
+Confirm "Delete App"
+Clear Website Data:
+
+Settings > Safari > Advanced > Website Data > Find "mekh.app" > Swipe left to delete
+Troubleshooting Installation Issues
+Common Android Issues
+Install Banner Not Showing:
+
+Clear browser cache and cookies
+Update Chrome to the latest version
+Try incognito/private browsing mode
+Check if the site is already installed
+App Won't Open:
+
+Restart your device
+Clear browser data
+Reinstall the PWA
+Poor Performance:
+
+Clear app cache through browser settings
+Check available storage space
+Update your Android version
+Common iOS Issues
+Can't Install from Safari:
+
+Ensure you're using Safari (not Chrome)
+Update to iOS 16.4 or later
+Clear Safari cache and website data
+Try restarting your device
+App Crashes on Launch:
+
+Force close the app (swipe up from bottom, swipe Mekh away)
+Restart your device
+Clear Safari website data for mekh.app
+Reinstall the PWA
+No Offline Functionality:
+
+PWA needs initial online setup
+Clear Safari data and reinstall
+General Troubleshooting
+Installation Fails:
+
+Check internet connection
+Ensure sufficient storage space (50MB+ free)
+Update your browser and OS
+Try a different browser (Android only)
+App Not Working Properly:
+
+Clear browser cache and cookies
+Restart your device
+Check for app updates
+Contact support if issues persist
+
+Benefits of Installing Mekh PWA
+User Experience
+Faster Loading: Cached content loads instantly
+Native Feel: App-like interface and navigation
+Offline Access: Browse cached content without internet
+Push Notifications: Instant updates (future feature)
+Home Screen Access: One-tap access from your device
+
+Performance Benefits
+Background Sync: Content updates automatically
+Smart Caching: Frequently used features load faster
+Reduced Data Usage: Cached content saves bandwidth
+Battery Efficient: Optimized for mobile performance
+
+Quick Actions: Home screen shortcuts for booking and search
+Seamless Experience: No need to open browser and navigate to site
+
+Frequently Asked Questions
+Q: Is the PWA the same as the website? A: Yes, the PWA is the full Mekh website optimized for mobile app experience.
+
+Q: Do I need to pay for the PWA? A: No, Mekh PWA is completely free to install and use.
+
+Q: Can I have both the PWA and website bookmark? A: Yes, they can coexist. The PWA provides a better mobile experience.
+
+Q: Does the PWA work offline? A: Yes, basic browsing and cached content work offline.
+
+Q: How do I update the PWA? A: Updates happen automatically. You can also force refresh by pulling down on the home screen.
+
+Q: Can I move the app icon? A: Yes, long-press and drag to rearrange on your home screen.
+
+Q: What if I clear browser data? A: The PWA remains installed, but you may need to sign in again.
+
+Q: Is my data safe in the PWA? A: Yes, Mekh uses the same security as the website with HTTPS encryption.
+
+Getting Help
+If you encounter issues during installation:
+
+Check this guide for your specific device and browser
+Clear browser cache and try again
+Contact Mekh support through the website
+Ensure your device meets the minimum requirements
+For technical support, visit the Contact page on mekh.app or reach out through the app once installed.
+
+This guide covers PWA installation for Mekh as of May 2026. Installation methods may evolve with browser and OS updates. Always ensure you're using the latest versions of your browser and operating system for the best experience.
+The app will soon be avialable in both playstore and appstore for quick installation
