@@ -1,8 +1,0 @@
-{
-  "deno.enable": true,
-  "deno.enablePaths": ["supabase/functions"],
-  "deno.unstable": true,
-  "deno.path": "C:\\Users\\aloff\\.deno\\bin\\deno.exe",
-  "deno.config": "./supabase/functions/deno.json",
-  "java.configuration.updateBuildConfiguration": "interactive"
-}
